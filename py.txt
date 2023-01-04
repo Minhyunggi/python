@@ -2,3 +2,12 @@ tuple은 list = ("1","2","3") 등으로 나타내고 변경불가능
 list는 list = ["1","2","3"] 등으로 나타내고 변경가능
 Dictionary는 list = {"name" : "min","age" : 27","alive" : True} 처럼 나타내고 Key와 Value를
 한쌍으로 가지는 자료형이다.
+for문 websites = (
+    "google.com",
+    "airbnb.com",
+    "facebook.com",
+    "twitter.com"
+)
+
+for website(s뺴고) in websites:(s넣고)
+    print(website)
