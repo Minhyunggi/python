@@ -11,3 +11,5 @@ for문 websites = (
 
 for website(s뺴고) in websites:(s넣고)
     print(website)
+
+임폴트 하는법 from requests import get 

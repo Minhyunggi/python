@@ -1,12 +1,13 @@
-websites = (
-    "https://google.com",
-    "airbnb.com",
-    "https://facebook.com",
-    "twitter.com",
-    "tiktok.com"
-)
+from requests import get
+from bs4 import BeautifulSoup
 
-for website in websites:
-    if not website.startswith("https://"):
-        website = f"https://{website}"
-print(websites)
+base_url = "https://weworkremotely.com/remote-jobs/search?&term="
+search_term = "python"
+
+response = get(f"{base_url}{search_term}")
+
+if response.status_code != 200:
+    print("Can't request this website")
+else:
+    soup = BeautifulSoup(response.text,"html.parser")
+    print(soup.get_text())
