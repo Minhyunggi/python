@@ -7,4 +7,4 @@ response = get(f"{base_url}")
 print(response.status_code)
 if response.status_code == 200:
     soup = BeautifulSoup(response.text,"html.parser")
-    print(soup.get_text())
+    print(soup.find_all("section",class_="jobs"))
