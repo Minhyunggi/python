@@ -1,6 +1,6 @@
-from requests import get
-from bs4 import BeautifulSoup
-from extractors.wwr import extract_jobs
+from selenium import webdriver
 
-jobs = extract_jobs("python")
-print(jobs)
+driver = webdriver.Chrome()
+driver.get('https://kr.indeed.com/jobs?q=python&l=&from=searchOnHP&vjk=89395b6ac5014113')
+while(True):
+    pass
